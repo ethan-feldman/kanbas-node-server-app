@@ -14,12 +14,12 @@ function EncodingParametersInURLs() {
         className="form-control" type="number" value={b}/>
       <h3>Path Parameters</h3>
       <a
-        href={`http://localhost:4000/a5/add/${a}/${b}`}
+        href={`https://kanbas-node-server-app-2-s5fe.onrender.com/a5/add/${a}/${b}`}
         className="btn btn-primary">
         Add {a} + {b}
       </a>
       <a
-        href={`http://localhost:4000/a5/subtract/${a}/${b}`}
+        href={`https://kanbas-node-server-app-2-s5fe.onrender.com/a5/subtract/${a}/${b}`}
         className="btn btn-danger">
         Substract {a} - {b}
       </a>
