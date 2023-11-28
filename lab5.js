@@ -18,6 +18,8 @@ const todos = [
   
 const Lab5 = (app) => {
 
+
+
     app.get("/a5/todos", (req, res) => {
         const { completed } = req.query;
         if (completed !== undefined) {
@@ -47,6 +49,12 @@ const Lab5 = (app) => {
         todo.due = req.body.due;
         todo.completed = req.body.completed;
         res.sendStatus(200);
+      });
+
+      app.get("/a5/todos/:id", (req, res) => {
+        const { id } = req.params
+        const todo = todos.find((t) => t.id === parseInt(id))
+        res.json(todo);
       });
     
 
@@ -99,6 +107,7 @@ const Lab5 = (app) => {
         const sum = parseInt(a) - parseInt(b);
         res.send(sum.toString());
       });
+
       app.get("/a5/calculator", (req, res) => {
         const { a, b, operation } = req.query;
         let result = 0;
