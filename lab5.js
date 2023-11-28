@@ -39,7 +39,7 @@ const Lab5 = (app) => {
         res.json(todos);
       });
 
-      app.post("/a5/todos/create", (req, res) => {
+      app.post("/a5/todos", (req, res) => {
         const newTodo = {
           ...req.body,
           id: new Date().getTime(),
@@ -47,6 +47,7 @@ const Lab5 = (app) => {
         todos.push(newTodo);
         res.json(newTodo);
       });
+    
     
 
       app.put("/a5/todos/:id", (req, res) => {
