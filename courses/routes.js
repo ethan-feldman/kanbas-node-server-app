@@ -15,9 +15,11 @@ function CourseRoutes(app) {
     app.put("/api/courses/:id", (req, res) => {
         const { id } = req.params;
         const course = req.body;
+        
         Database.courses = Database.courses.map((c) =>
           c._id === id ? { ...c, ...course } : c
         );
+
         res.sendStatus(204);
       });
 

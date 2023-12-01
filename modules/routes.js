@@ -39,5 +39,6 @@ function ModuleRoutes(app) {
       .filter((m) => m.course === cid);
     res.send(modules);
   });
+
 }
 export default ModuleRoutes;
